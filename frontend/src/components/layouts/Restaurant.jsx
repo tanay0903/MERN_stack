@@ -8,16 +8,19 @@ export default function Restaurant({ restaurant }) {
           alt={restaurant.name}
           className="card-img-top mx-auto"
         />
+
         {/* heading and address */}
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{restaurant.name}</h5>
           <p className="rest_address">{restaurant.address}e</p>
+
           {/* reviews and ratings */}
           <div className="ratings mt-auot">
             <div className="rating-outer">
               <div className="rating-inner" style={{width:`${(restaurant.ratings / 5) * 100}%`}}>
               </div>
             </div>
+            
             <span id="no_of_reviews">({restaurant.numOfReviews} reviews)</span>
           </div>
         </div>
