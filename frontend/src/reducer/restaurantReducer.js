@@ -12,13 +12,13 @@ export const restaurantReducer = (state = initialState, action) => {
                 loading: true,  
                 error: null,
             };            
-            case ALL_RESTAURANTS_SUCCESS:
-                return{
-                    ...state,
-                    loading: false,
-                    count: action.payload.count,
-                    restaurants: action.payload,  
-                };
+        case ALL_RESTAURANTS_SUCCESS:
+            return{
+                ...state,
+                loading: false,
+                count: action.payload.count,
+                restaurants: action.payload.restaurants,  
+            };
             
         default:
             return state;

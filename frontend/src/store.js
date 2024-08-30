@@ -2,7 +2,6 @@ import { legacy_createStore as createStore, combineReducers, applyMiddleware, co
 import thunk from "redux-thunk";
 import {restaurantReducer} from "./reducer/restaurantReducer";
 
-
 const reducer = combineReducers({
     restaurants: restaurantReducer,
 });
@@ -10,11 +9,8 @@ const reducer = combineReducers({
 const composeenhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || 
 compose;
 
-
 const middleware = [thunk]; 
-
 
 const store = createStore(reducer, composeenhancers(applyMiddleware(...middleware)));
 
 export default store;
-
