@@ -15,7 +15,7 @@ const reducer = combineReducers({
   auth: authReducer,
 });
 
-const composeenhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeenhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 
 const middleware = [thunk];
 

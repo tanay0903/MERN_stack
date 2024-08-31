@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_MENU_FAIL, GET_MENU_REQUEST, GET_MENU_SUCCESS } from "../constants/menuConstants";
+import { GET_MENU_FAIL, GET_MENU_REQUEST, GET_MENU_SUCCESS } from "../constants/menuConstant";
 
 export const getMenus = (id) => async (dispatch) => {
     try {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import FoodItem from './FoodItem'
 import { useDispatch, useSelector } from 'react-redux';
-import { getMenus } from '../../constants/menuAction'
+import { getMenus } from '../../actions/menuAction'
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
 import Message from './Message';
