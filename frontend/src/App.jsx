@@ -15,6 +15,7 @@ export default function App() {
         <div className="container container-fluid">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/" />
           </Routes>
           <Home/>
         </div>
