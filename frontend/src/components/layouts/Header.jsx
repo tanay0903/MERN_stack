@@ -2,7 +2,7 @@ import React from 'react'
 import Search from './Search'
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+export default function Header() {
   return <nav className="navbar row stick-top">
     {/* logo */}
     <div className="col-12 col-md-3">
@@ -44,4 +44,3 @@ const Header = () => {
     
 }
 
-export default Header
