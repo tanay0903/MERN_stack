@@ -12,7 +12,8 @@ export default function Header() {
 
   const logoutHandler = () => {
     dispatch(logout());
-  }
+    alert.success("Logged Out Successfully");
+  };
 
   return (
     <nav className="navbar row stick-top">
