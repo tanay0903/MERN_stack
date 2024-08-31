@@ -11,6 +11,8 @@ import Register from "./components/users/Register";
 import store from "./store";
 import { loadUser } from "./actions/userAction";
 import Profile from "./components/users/Profile";
+import ForgotPassword from "./components/users/ForgotPassword";
+import NewPassword from "./components/users/NewPassword";
 import UpdateProfile from "./components/users/UpdateProfile";
 
 export default function App() {
@@ -33,6 +35,8 @@ export default function App() {
             <Route path="/users/signup/" element={<Register/>} />
             <Route path="/users/me" element={<Profile/>} />
             <Route path="/users/me/update" element={<UpdateProfile/>} />
+            <Route path="/users/forgotPassword" element={<ForgotPassword/>} />
+            <Route path="/users/resetPassword/:token" element={<NewPassword/>} />
           </Routes>
         </div>
         <Footer/>
