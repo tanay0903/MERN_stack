@@ -2,7 +2,6 @@ import React from 'react'
 import { useAlert } from 'react-alert';
 import { LiaRupeeSignSolid } from "react-icons/lia";
 
-
 export default function FoodItem({ fooditem }) {
 
     const alert = useAlert();

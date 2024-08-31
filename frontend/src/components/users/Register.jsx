@@ -115,7 +115,7 @@ const Register = () => {
                 id="password_field"
                 className="form-control"
                 name="password"
-                value={email}
+                value={password}
                 onChange={onChange}
               ></input>
             </div>
