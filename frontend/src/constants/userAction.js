@@ -2,7 +2,9 @@ import axios from "axios";
 import { 
     LOGIN_REQUEST, 
     LOGIN_FAIL, 
-    LOGIN_SUCCESS 
+    LOGIN_SUCCESS ,
+    LOGOUT_SUCCESS,
+    CLEAR_ERROR,
 } from "../constants/userConstant";
 
 // User Action
