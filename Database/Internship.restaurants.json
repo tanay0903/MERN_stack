@@ -38,9 +38,9 @@
   "_id": {
     "$oid": "6671719fe1a78e67dc8c8dce"
   },
-  "name": "Mani's Dum Biryani",
+  "name": "Veg Biryani",
   "isVeg": false,
-  "address": "Halasuru, Yellappa Chetty Layout, Sivanchetti Gardens, Bengaluru, Karnataka 560042",
+  "address": "Halasuru, Yellappa Chetty Layout, Sivanchetti Gardens,Luchnow, UP 560042",
   "ratings": 4.7,
   "numOfReviews": 147,
   "location": {
@@ -65,7 +65,7 @@
   "images": [
     {
       "public_id": "image1",
-      "url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/e6bfe20a8b03779efebeb04eae9a86c6"
+      "url": "https://www.ticklingpalates.com/wp-content/uploads/2020/09/vegetable-dum-biryani.jpg"
     }
   ],
   "createdAt": "2023-06-17T12:00:00Z"
@@ -261,7 +261,7 @@
   "images": [
     {
       "public_id": "image1",
-      "url": "https://tse4.mm.bing.net/th?id=OIG2.HoKkNfx8R_.WKzdDzd2z&pid=ImgGn"
+      "url": "https://nishkitchen.com/wp-content/uploads/2017/11/Veg-Biryani-5B.jpg"
     }
   ]
 },
