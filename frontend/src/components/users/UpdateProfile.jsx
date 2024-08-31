@@ -1,6 +1,43 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {useAlert} from "react-alert";
+import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
+import {clearErrors} from "../../actions/userAction";
+import { UPDATE_PROFILE_RESET } from "../../constants/userConstant";
 
 const UpdateProfile = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [avatar, setAvatar] = useState("");
+  const [avatarPreview ,setAvatarPreview] = useState("/images/images.png");
+
+  const alert = useAlert();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const {user} = useSelector((state) => state.auth);
+  const {error, isUpdated, loading} = useSelector((state) => state.user);
+
+  useEffect(() =>{
+    if(user){
+      setName(user.name);
+      setEmail(user.Email);
+      setAvatarPreview(user.avatar.url);
+    }
+    if(error){
+      alert.error(error);
+      dispatch(clearErrors());
+    }
+    if(isUpdated){
+      alert.success("user updated successfully");
+      dispatch(loadUser());
+      navigate("users/me");
+      dispatch({
+        type: UPDATE_PROFILE_RESET,
+      })
+    }
+  }, [dispatch, alert, error, navigate, isUpdated, user]);
+
   return (
     <>
       <div className="row wrapper">
