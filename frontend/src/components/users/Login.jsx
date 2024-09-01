@@ -73,7 +73,7 @@ const Login = () => {
                 >
                   LOGIN
                 </button>
-                <Link to="/user/signup" className="float-right mt-3">NEW USER?</Link>
+                <Link to="/users/signup" className="float-right mt-3">NEW USER?</Link>
               </form>
             </div>
           </div>

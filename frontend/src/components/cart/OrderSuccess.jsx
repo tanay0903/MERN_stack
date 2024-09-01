@@ -1,6 +1,6 @@
 import React from "react";
 
-const OrderSuccess = () => {
+export const OrderSuccess = () => {
   return (
     <>
       <div className="row justify-content-center">

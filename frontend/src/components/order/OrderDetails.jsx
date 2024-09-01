@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import Loader from "../layouts/Loader";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 
-const OrderDetails = () => {
+export const OrderDetails = () => {
   return (
     <>
       {5 > 10 ? (

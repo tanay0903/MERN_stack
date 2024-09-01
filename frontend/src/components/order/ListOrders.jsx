@@ -3,7 +3,7 @@ import React from "react";
 import { FaRegEye } from "react-icons/fa6";
 import Loader from "../layouts/Loader";
 
-const ListOrders = () => {
+export const ListOrders = () => {
   return (
     <>
       <div className="cartt">
