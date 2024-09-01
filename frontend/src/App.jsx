@@ -14,14 +14,23 @@ import Profile from "./components/users/Profile";
 import ForgotPassword from "./components/users/ForgotPassword";
 import NewPassword from "./components/users/NewPassword";
 import UpdateProfile from "./components/users/UpdateProfile";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCartItems } from "./actions/cartAction";
 
 export default function App() {
 
   // dispatched exactly once when the component is first rendered, and check if user is authenticated or not
   console.log(store);
   useEffect(() => {
-    store.dispatch(loadUser);
-  }, []);
+    store.dispatch(loadUser());
+}, []);
+
+const dispatch = useDispatch();
+
+const { user } = useSelector((state) => state.auth);
+if(user){
+  dispatch(fetchCartItems());
+}
 
   return (
     <BrowserRouter>
@@ -37,6 +46,7 @@ export default function App() {
             <Route path="/users/me/update" element={<UpdateProfile/>} />
             <Route path="/users/forgotPassword" element={<ForgotPassword/>} />
             <Route path="/users/resetPassword/:token" element={<NewPassword/>} />
+            <Route path="/cart" element={<cart />}/>
           </Routes>
         </div>
         <Footer/>

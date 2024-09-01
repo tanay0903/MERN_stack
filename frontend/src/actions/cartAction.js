@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ADD_TO_CART, FETCH_CART, REMOVE_CART_ITEM, UPDATE_CART_ITEM } from "../constants/cartConstant";
 
-export const fetchCartItens  = (alert) => async (dispatch) => {
+export const fetchCartItems  = (alert) => async (dispatch) => {
     try {
         const response = await axios.get("/api/v1/eats/cart/get-cart");
 
