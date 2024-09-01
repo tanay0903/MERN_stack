@@ -18,7 +18,7 @@ export const fetchCartItens  = (alert) => async (dispatch) => {
 };
 
 // Add to cart
-export const addItemCart = (foodItemId, restaurant, quantity, alert) => async (dispatch, getState) => {
+export const addItemToCart = (foodItemId, restaurant, quantity, alert) => async (dispatch, getState) => {
     try {
         const {user } = getState().auth; // return the current store tree
 
