@@ -62,19 +62,24 @@ const Register = () => {
   };
 
   const onChange = (e) => {
-    if(e.target.name === "avatar") {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.readyState === 2) { // indicates the reading is done
-          setAvatarPreview(reader.result);
-          setAvatar(reader.result);
-        }
-      };
-      reader.readAsDataURL(e.target.files[0]);
+    if (e.target.name === "avatar") {
+      const file = e.target.files[0];
+      
+      if (file) { // Ensure a file is selected
+        const reader = new FileReader();
+        reader.onload = () => {
+          if (reader.readyState === 2) { // 2 means the operation is complete
+            setAvatarPreview(reader.result);
+            setAvatar(reader.result);
+          }
+        };
+        reader.readAsDataURL(file);
+      }
     } else {
-      setUser({...user, [e.target.name]: e.target.value});
+      setUser({ ...user, [e.target.name]: e.target.value });
     }
   };
+  
 
   return (
     <>
